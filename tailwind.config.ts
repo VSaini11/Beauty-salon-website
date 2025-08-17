@@ -51,6 +51,18 @@ const config: Config = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			},
+  			golden: {
+  				50: '#fffdf2',
+  				100: '#fffae6',
+  				200: '#fff2b8',
+  				300: '#ffe88a',
+  				400: '#ffd700',
+  				500: '#ffb700',
+  				600: '#e6a600',
+  				700: '#b8860b',
+  				800: '#8b6914',
+  				900: '#5e4c1c'
+  			},
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',
   				foreground: 'hsl(var(--sidebar-foreground))',

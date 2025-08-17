@@ -119,25 +119,25 @@ export function Booking() {
   return (
     <section
       id="booking"
-      className="py-20 bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50 relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-black via-gray-900 to-golden-900 relative overflow-hidden"
     >
       {/* Background Decorations */}
-      <div className="absolute top-10 right-10 w-40 h-40 bg-gradient-to-br from-rose-300 to-pink-300 rounded-full opacity-20 animate-float"></div>
+      <div className="absolute top-10 right-10 w-40 h-40 bg-gradient-to-br from-golden-300 to-golden-500 rounded-full opacity-20 animate-float"></div>
       <div
-        className="absolute bottom-10 left-10 w-32 h-32 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full opacity-20 animate-float"
+        className="absolute bottom-10 left-10 w-32 h-32 bg-gradient-to-br from-golden-400 to-golden-600 rounded-full opacity-20 animate-float"
         style={{ animationDelay: "3s" }}
       ></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className={`text-center mb-16 ${isVisible ? "animate-fadeInUp" : "opacity-0"}`}>
           <div className="flex items-center justify-center mb-4">
-            <Sparkles className="h-8 w-8 text-rose-500 mr-2 animate-pulse" />
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
+            <Sparkles className="h-8 w-8 text-golden-400 mr-2 animate-pulse" />
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">
               Book Your <span className="gradient-text">Appointment</span>
             </h2>
-            <Sparkles className="h-8 w-8 text-rose-500 ml-2 animate-pulse" />
+            <Sparkles className="h-8 w-8 text-golden-400 ml-2 animate-pulse" />
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Schedule your beauty session with us. Choose your preferred service and time slot.
           </p>
         </div>
@@ -146,11 +146,11 @@ export function Booking() {
           className={`max-w-4xl mx-auto ${isVisible ? "animate-fadeInUp" : "opacity-0"}`}
           style={{ animationDelay: "0.3s" }}
         >
-          <Card className="shadow-2xl border-0 bg-white/90 backdrop-blur-sm overflow-hidden">
-            <CardHeader className="text-center bg-gradient-to-r from-rose-500 to-pink-500 text-white relative overflow-hidden">
+          <Card className="shadow-golden border border-golden-700 bg-black/90 backdrop-blur-sm overflow-hidden">
+            <CardHeader className="text-center bg-gradient-to-r from-golden-400 to-golden-600 text-black relative overflow-hidden">
               <div className="absolute inset-0 bg-white/10 animate-pulse"></div>
               <CardTitle className="text-3xl font-bold relative z-10">Schedule Appointment</CardTitle>
-              <CardDescription className="text-rose-100 text-lg relative z-10">
+              <CardDescription className="text-black/80 text-lg relative z-10 font-semibold">
                 Fill in your details and we'll get back to you to confirm your booking
               </CardDescription>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-white/10 rounded-full animate-float"></div>
@@ -160,12 +160,12 @@ export function Booking() {
               ></div>
             </CardHeader>
 
-            <CardContent className="p-8">
+            <CardContent className="p-8 bg-black/50">
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-3 group">
-                    <Label htmlFor="name" className="flex items-center gap-2 text-gray-700 font-medium">
-                      <User className="h-5 w-5 text-rose-500 group-hover:scale-110 transition-transform duration-300" />
+                    <Label htmlFor="name" className="flex items-center gap-2 text-golden-400 font-medium">
+                      <User className="h-5 w-5 text-golden-500 group-hover:scale-110 transition-transform duration-300" />
                       Full Name
                     </Label>
                     <Input
@@ -173,14 +173,14 @@ export function Booking() {
                       value={formData.name}
                       onChange={(e) => handleInputChange("name", e.target.value)}
                       placeholder="Enter your full name"
-                      className="border-2 border-gray-200 focus:border-rose-500 transition-all duration-300 rounded-xl py-3"
+                      className="border-2 border-golden-600 focus:border-golden-400 transition-all duration-300 rounded-xl py-3 bg-black/70 text-white placeholder-gray-400"
                       required
                     />
                   </div>
 
                   <div className="space-y-3 group">
-                    <Label htmlFor="phone" className="flex items-center gap-2 text-gray-700 font-medium">
-                      <Phone className="h-5 w-5 text-rose-500 group-hover:scale-110 transition-transform duration-300" />
+                    <Label htmlFor="phone" className="flex items-center gap-2 text-golden-400 font-medium">
+                      <Phone className="h-5 w-5 text-golden-500 group-hover:scale-110 transition-transform duration-300" />
                       Phone Number
                     </Label>
                     <Input
@@ -189,15 +189,15 @@ export function Booking() {
                       value={formData.phone}
                       onChange={(e) => handleInputChange("phone", e.target.value)}
                       placeholder="Enter your phone number"
-                      className="border-2 border-gray-200 focus:border-rose-500 transition-all duration-300 rounded-xl py-3"
+                      className="border-2 border-golden-600 focus:border-golden-400 transition-all duration-300 rounded-xl py-3 bg-black/70 text-white placeholder-gray-400"
                       required
                     />
                   </div>
                 </div>
 
                 <div className="space-y-3 group">
-                  <Label htmlFor="email" className="flex items-center gap-2 text-gray-700 font-medium">
-                    <Mail className="h-5 w-5 text-rose-500 group-hover:scale-110 transition-transform duration-300" />
+                  <Label htmlFor="email" className="flex items-center gap-2 text-golden-400 font-medium">
+                    <Mail className="h-5 w-5 text-golden-500 group-hover:scale-110 transition-transform duration-300" />
                     Email Address
                   </Label>
                   <Input
@@ -206,18 +206,18 @@ export function Booking() {
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
                     placeholder="Enter your email address"
-                    className="border-2 border-gray-200 focus:border-rose-500 transition-all duration-300 rounded-xl py-3"
+                    className="border-2 border-golden-600 focus:border-golden-400 transition-all duration-300 rounded-xl py-3 bg-black/70 text-white placeholder-gray-400"
                     required
                   />
                 </div>
 
                 <div className="space-y-3 group">
-                  <Label className="flex items-center gap-2 text-gray-700 font-medium">
-                    <Sparkles className="h-5 w-5 text-rose-500 group-hover:scale-110 transition-transform duration-300" />
+                  <Label className="flex items-center gap-2 text-golden-400 font-medium">
+                    <Sparkles className="h-5 w-5 text-golden-500 group-hover:scale-110 transition-transform duration-300" />
                     Select Service
                   </Label>
                   <Select value={formData.service} onValueChange={(value) => handleInputChange("service", value)}>
-                    <SelectTrigger className="border-2 border-gray-200 focus:border-rose-500 transition-all duration-300 rounded-xl py-3">
+                    <SelectTrigger className="border-2 border-golden-600 focus:border-golden-400 transition-all duration-300 rounded-xl py-3 bg-black/70 text-white">
                       <SelectValue placeholder="Choose a service" />
                     </SelectTrigger>
                     <SelectContent className="rounded-xl">
@@ -225,7 +225,7 @@ export function Booking() {
                         <SelectItem
                           key={service}
                           value={service}
-                          className="hover:bg-rose-50 transition-colors duration-200"
+                          className="hover:bg-golden-50 transition-colors duration-200"
                         >
                           {service}
                         </SelectItem>
@@ -236,8 +236,8 @@ export function Booking() {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-3 group">
-                    <Label htmlFor="date" className="flex items-center gap-2 text-gray-700 font-medium">
-                      <Calendar className="h-5 w-5 text-rose-500 group-hover:scale-110 transition-transform duration-300" />
+                    <Label htmlFor="date" className="flex items-center gap-2 text-golden-400 font-medium">
+                      <Calendar className="h-5 w-5 text-golden-500 group-hover:scale-110 transition-transform duration-300" />
                       Preferred Date
                     </Label>
                     <Input
@@ -246,18 +246,18 @@ export function Booking() {
                       value={formData.date}
                       onChange={(e) => handleInputChange("date", e.target.value)}
                       min={new Date().toISOString().split("T")[0]}
-                      className="border-2 border-gray-200 focus:border-rose-500 transition-all duration-300 rounded-xl py-3"
+                      className="border-2 border-golden-600 focus:border-golden-400 transition-all duration-300 rounded-xl py-3 bg-black/70 text-white"
                       required
                     />
                   </div>
 
                   <div className="space-y-3 group">
-                    <Label className="flex items-center gap-2 text-gray-700 font-medium">
-                      <Clock className="h-5 w-5 text-rose-500 group-hover:scale-110 transition-transform duration-300" />
+                    <Label className="flex items-center gap-2 text-golden-400 font-medium">
+                      <Clock className="h-5 w-5 text-golden-500 group-hover:scale-110 transition-transform duration-300" />
                       Preferred Time
                     </Label>
                     <Select value={formData.time} onValueChange={(value) => handleInputChange("time", value)}>
-                      <SelectTrigger className="border-2 border-gray-200 focus:border-rose-500 transition-all duration-300 rounded-xl py-3">
+                      <SelectTrigger className="border-2 border-golden-600 focus:border-golden-400 transition-all duration-300 rounded-xl py-3 bg-black/70 text-white">
                         <SelectValue placeholder="Choose time slot" />
                       </SelectTrigger>
                       <SelectContent className="rounded-xl">
@@ -265,7 +265,7 @@ export function Booking() {
                           <SelectItem
                             key={time}
                             value={time}
-                            className="hover:bg-rose-50 transition-colors duration-200"
+                            className="hover:bg-golden-50 transition-colors duration-200"
                           >
                             {time}
                           </SelectItem>
@@ -276,7 +276,7 @@ export function Booking() {
                 </div>
 
                 <div className="space-y-3">
-                  <Label htmlFor="notes" className="text-gray-700 font-medium">
+                  <Label htmlFor="notes" className="text-golden-400 font-medium">
                     Additional Notes (Optional)
                   </Label>
                   <Textarea
@@ -285,7 +285,7 @@ export function Booking() {
                     onChange={(e) => handleInputChange("notes", e.target.value)}
                     placeholder="Any special requests or notes..."
                     rows={4}
-                    className="border-2 border-gray-200 focus:border-rose-500 transition-all duration-300 rounded-xl resize-none"
+                    className="border-2 border-golden-600 focus:border-golden-400 transition-all duration-300 rounded-xl resize-none bg-black/70 text-white placeholder-gray-400"
                   />
                 </div>
 
@@ -294,13 +294,13 @@ export function Booking() {
                   disabled={!isFormValid || isSubmitting}
                   className={`w-full py-4 text-lg font-semibold rounded-xl transition-all duration-500 transform ${
                     isFormValid && !isSubmitting
-                      ? "bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 hover:scale-105 hover:shadow-xl text-white"
+                      ? "bg-gradient-to-r from-golden-400 to-golden-600 hover:from-golden-500 hover:to-golden-700 hover:scale-105 hover:shadow-golden text-black"
                       : "bg-gray-300 text-gray-500 cursor-not-allowed"
                   }`}
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white mr-2"></div>
+                      <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-black mr-2"></div>
                       Booking Appointment...
                     </div>
                   ) : (

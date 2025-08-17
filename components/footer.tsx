@@ -5,12 +5,12 @@ import { Button } from "@/components/ui/button"
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
       {/* Background Decorations */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-rose-500 via-pink-500 to-purple-500"></div>
-      <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-full animate-float"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-golden-400 via-golden-500 to-golden-600"></div>
+      <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-golden-400/20 to-golden-600/20 rounded-full animate-float"></div>
       <div
-        className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full animate-float"
+        className="absolute bottom-10 left-10 w-24 h-24 bg-gradient-to-br from-golden-500/20 to-golden-700/20 rounded-full animate-float"
         style={{ animationDelay: "2s" }}
       ></div>
 
@@ -21,11 +21,11 @@ export function Footer() {
             <div className="flex items-center space-x-3 group">
               <div className="relative">
                 <img
-                  src="/placeholder.svg?height=50&width=50"
+                  src="../WhatsApp Image 2025-08-17 at 19.54.37_816c555f.jpg"
                   alt="Beauty WithCare Logo"
                   className="h-12 w-12 rounded-full transition-transform duration-300 group-hover:scale-110"
                 />
-                <Sparkles className="absolute -top-1 -right-1 h-4 w-4 text-rose-400 animate-pulse" />
+                <Sparkles className="absolute -top-1 -right-1 h-4 w-4 text-golden-400 animate-pulse" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold gradient-text">Beauty WithCare</h3>
@@ -40,14 +40,14 @@ export function Footer() {
               <Button
                 size="icon"
                 variant="ghost"
-                className="hover:bg-rose-500/20 hover:text-rose-400 transition-all duration-300 rounded-full"
+                className="hover:bg-golden-500/20 hover:text-golden-400 transition-all duration-300 rounded-full"
               >
                 <Instagram className="h-5 w-5" />
               </Button>
               <Button
                 size="icon"
                 variant="ghost"
-                className="hover:bg-rose-500/20 hover:text-rose-400 transition-all duration-300 rounded-full"
+                className="hover:bg-golden-500/20 hover:text-golden-400 transition-all duration-300 rounded-full"
               >
                 <Facebook className="h-5 w-5" />
               </Button>
@@ -62,11 +62,11 @@ export function Footer() {
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
-                    className="text-gray-400 hover:text-rose-400 transition-all duration-300 hover:translate-x-2 inline-block group"
+                    className="text-gray-400 hover:text-golden-400 transition-all duration-300 hover:translate-x-2 inline-block group"
                   >
                     <span className="relative">
                       {item}
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-rose-400 group-hover:w-full transition-all duration-300"></span>
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-golden-400 group-hover:w-full transition-all duration-300"></span>
                     </span>
                   </a>
                 </li>
@@ -87,7 +87,7 @@ export function Footer() {
               ].map((service, index) => (
                 <li
                   key={service}
-                  className="text-gray-400 hover:text-rose-400 transition-colors duration-300 cursor-pointer"
+                  className="text-gray-400 hover:text-golden-400 transition-colors duration-300 cursor-pointer"
                 >
                   {service}
                 </li>
@@ -99,16 +99,16 @@ export function Footer() {
           <div className="space-y-6 animate-fadeInUp" style={{ animationDelay: "0.6s" }}>
             <h4 className="text-xl font-semibold text-white">Contact Info</h4>
             <div className="space-y-4">
-              <div className="flex items-center space-x-3 text-gray-400 hover:text-rose-400 transition-colors duration-300">
-                <MapPin className="h-5 w-5 text-rose-400" />
+              <div className="flex items-center space-x-3 text-gray-400 hover:text-golden-400 transition-colors duration-300">
+                <MapPin className="h-5 w-5 text-golden-400" />
                 <span className="text-sm"> JR-91 Hindalco Colony Near Building Store, Renukoot, Uttar Pradesh 231217</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-400 hover:text-rose-400 transition-colors duration-300">
-                <Phone className="h-5 w-5 text-rose-400" />
+              <div className="flex items-center space-x-3 text-gray-400 hover:text-golden-400 transition-colors duration-300">
+                <Phone className="h-5 w-5 text-golden-400" />
                 <span className="text-sm">+91 8795629877</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-400 hover:text-rose-400 transition-colors duration-300">
-                <Mail className="h-5 w-5 text-rose-400" />
+              <div className="flex items-center space-x-3 text-gray-400 hover:text-golden-400 transition-colors duration-300">
+                <Mail className="h-5 w-5 text-golden-400" />
                 <span className="text-sm">info@beautywithcare.com</span>
               </div>
             </div>
@@ -116,10 +116,10 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
+        <div className="border-t border-golden-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm flex items-center gap-2 animate-fadeInUp">
-              Made with <Heart className="h-4 w-4 text-rose-500 fill-current animate-pulse" /> for Beauty WithCare
+              Made with <Heart className="h-4 w-4 text-golden-500 fill-current animate-pulse" /> for Beauty WithCare
             </p>
             <p className="text-gray-500 text-xs animate-fadeInUp">© 2024 Beauty WithCare. All rights reserved.</p>
           </div>

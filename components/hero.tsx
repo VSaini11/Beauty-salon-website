@@ -22,17 +22,17 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50"
+      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-golden-900"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-rose-300 to-pink-300 rounded-full opacity-20 animate-float"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-golden-400 to-golden-600 rounded-full opacity-20 animate-float"></div>
         <div
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full opacity-20 animate-float"
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-golden-600 to-golden-800 rounded-full opacity-20 animate-float"
           style={{ animationDelay: "2s" }}
         ></div>
         <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-rose-200 to-pink-200 rounded-full opacity-30 animate-float"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-golden-300 to-golden-500 rounded-full opacity-30 animate-float"
           style={{ animationDelay: "4s" }}
         ></div>
       </div>
@@ -40,7 +40,7 @@ export function Hero() {
       {/* Floating Icons */}
       {floatingIcons.map(({ Icon, delay, position }, index) => (
         <div key={index} className={`absolute ${position} hidden lg:block`} style={{ animationDelay: `${delay}s` }}>
-          <Icon className="h-8 w-8 text-rose-400 opacity-60 animate-float" />
+          <Icon className="h-8 w-8 text-golden-400 opacity-60 animate-float" />
         </div>
       ))}
 
@@ -48,12 +48,12 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className={`space-y-8 ${isVisible ? "animate-slideInLeft" : "opacity-0"}`}>
             <div className="space-y-6">
-              <div className="flex items-center space-x-2 text-rose-600 animate-fadeInUp">
+              <div className="flex items-center space-x-2 text-golden-400 animate-fadeInUp">
                 <Sparkles className="h-5 w-5 animate-pulse" />
                 <span className="text-sm font-medium tracking-wide uppercase">Professional Beauty Care</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
                 <span className="block animate-fadeInUp">Beauty</span>
                 <span className="block gradient-text animate-fadeInUp" style={{ animationDelay: "0.2s" }}>
                   WithCare
@@ -61,7 +61,7 @@ export function Hero() {
               </h1>
 
               <p
-                className="text-xl lg:text-2xl text-gray-600 leading-relaxed animate-fadeInUp"
+                className="text-xl lg:text-2xl text-gray-300 leading-relaxed animate-fadeInUp"
                 style={{ animationDelay: "0.4s" }}
               >
                 Transform your look with our expert beauty services. From stunning hairstyles to radiant facials, we
@@ -73,7 +73,7 @@ export function Hero() {
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                className="bg-gradient-to-r from-golden-400 to-golden-600 hover:from-golden-500 hover:to-golden-700 text-black px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-golden font-bold"
               >
                 <Link href="#booking">Book Appointment</Link>
               </Button>
@@ -81,7 +81,7 @@ export function Hero() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-2 border-rose-500 text-rose-600 hover:bg-rose-50 px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                className="border-2 border-golden-400 text-black hover:bg-white-400/10 px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               >
                 <Link href="#services">View Services</Link>
               </Button>
@@ -95,13 +95,13 @@ export function Hero() {
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className="h-5 w-5 fill-yellow-400 text-yellow-400 animate-pulse"
+                    className="h-5 w-5 fill-golden-400 text-golden-400 animate-pulse"
                     style={{ animationDelay: `${i * 0.1}s` }}
                   />
                 ))}
               </div>
-              <div className="text-gray-600">
-                <span className="text-2xl font-bold text-rose-600">500+</span>
+              <div className="text-gray-300">
+                <span className="text-2xl font-bold text-golden-400">500+</span>
                 <span className="ml-2">Happy Customers</span>
               </div>
             </div>
@@ -110,33 +110,65 @@ export function Hero() {
           <div className={`relative ${isVisible ? "animate-slideInRight" : "opacity-0"}`}>
             <div className="relative z-10 group">
               <div className="relative overflow-hidden rounded-3xl shadow-2xl transform transition-all duration-500 group-hover:scale-105">
-                <img
-                  src="/placeholder.svg?height=600&width=500"
-                  alt="Beauty salon interior"
-                  className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-rose-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                {/* 2x2 Grid for 4 Photos */}
+                <div className="grid grid-cols-2 gap-2 p-2 bg-black/20 backdrop-blur-sm">
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <img
+                      src="../WhatsApp Image 2025-08-17 at 20.56.05_d8a41611.jpg"
+                      alt="Hair styling service"
+                      className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-golden-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                  
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <img
+                      src="../img2.jpg"
+                      alt="Threading service"
+                      className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-golden-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                  
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <img
+                      src="../img3.jpg"
+                      alt="Bridal services"
+                      className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-golden-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                  
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <img
+                      src="../img4.jpg"
+                      alt="Facial treatments"
+                      className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-golden-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                </div>
               </div>
 
               {/* Floating Stats Cards */}
-              <div className="absolute -top-6 -left-6 bg-white/90 backdrop-blur-sm p-4 rounded-2xl shadow-lg animate-float">
-                <div className="text-sm text-gray-600">Experience</div>
+              <div className="absolute -top-6 -left-6 bg-black/90 backdrop-blur-sm p-4 rounded-2xl shadow-golden animate-float border border-golden-700">
+                <div className="text-sm text-golden-400">Experience</div>
                 <div className="text-2xl font-bold gradient-text">10+ Years</div>
               </div>
 
               <div
-                className="absolute -bottom-6 -right-6 bg-white/90 backdrop-blur-sm p-4 rounded-2xl shadow-lg animate-float"
+                className="absolute -bottom-6 -right-6 bg-black/90 backdrop-blur-sm p-4 rounded-2xl shadow-golden animate-float border border-golden-700"
                 style={{ animationDelay: "1s" }}
               >
-                <div className="text-sm text-gray-600">Rating</div>
+                <div className="text-sm text-golden-400">Rating</div>
                 <div className="text-2xl font-bold gradient-text">4.9★</div>
               </div>
             </div>
 
             {/* Background Decorative Elements */}
-            <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-rose-300 to-pink-300 rounded-full opacity-30 animate-float"></div>
+            <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-golden-300 to-golden-500 rounded-full opacity-30 animate-float"></div>
             <div
-              className="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full opacity-30 animate-float"
+              className="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-br from-golden-400 to-golden-600 rounded-full opacity-30 animate-float"
               style={{ animationDelay: "2s" }}
             ></div>
           </div>
