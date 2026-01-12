@@ -11,7 +11,8 @@ const certifications = [
     title: "Nail Extension and Nail Art Certificate",
     issuer: "Navyug Digital Private Limited",
     year: "2023",
-    pdfPath: "/Nandi b Academy Private _20250625_120651_0000.pdf", // Example PDF from your public folder
+    pdfPath: "/Nandi b Academy Private _20250625_120651_0000.pdf",
+    imagePath: "/Nail image.jpg", // Example PDF from your public folder
   },
   {
     icon: Star,
@@ -19,7 +20,8 @@ const certifications = [
     issuer: "Navyug Digital Private Limited",
     year: "2022",
     description: "Specialized training in modern hair cutting techniques, coloring, and advanced styling methods.",
-    pdfPath: "/Nandi b Academy Private _20250709_153407_0000.pdf", // Example PDF from your public folder
+    pdfPath: "/Nandi b Academy Private _20250709_153407_0000.pdf",
+    imagePath: "/Beautician.jpg", // Example PDF from your public folder
   },
   
   {
@@ -28,7 +30,8 @@ const certifications = [
     issuer: "Navyug Digital Private Limited",
     year: "2024",
     description: "Professional certification in haircare, hairstyling, and advanced hair treatment services.",
-    pdfPath: "/Hair Treatment Certificate.pdf", // No PDF uploaded yet
+    pdfPath: "/Hair Treatment Certificate.pdf",
+    imagePath: "/Hair Treatment Certificate_page-0001.jpg", // No PDF uploaded yet
   },
 ]
 
