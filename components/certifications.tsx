@@ -134,13 +134,14 @@ export function Certifications() {
                 <CardContent className="p-6 relative z-10 flex flex-col h-full">
                   {/* PDF Display Area */}
                   <div className="relative overflow-hidden rounded-lg mb-4 h-48 border-2 border-dashed border-golden-600 bg-black/30">
-                    {cert.pdfPath ? (
+                    {cert.imagePath ? (
                       <div className="w-full h-full relative">
                         {/* PDF Preview Frame */}
-                        <iframe
-                          src={`${cert.pdfPath}#toolbar=0&navpanes=0&scrollbar=0`}
-                          className="w-full h-full border-0 pointer-events-none"
-                          style={{ transform: 'scale(0.7)', transformOrigin: 'top left', width: '142.86%', height: '142.86%' }}
+                        <img
+                          src={cert.imagePath}
+                          alt={cert.title}
+                          className="w-full h-full object-contain cursor-pointer"
+                          
                         />
                         {/* Overlay for interaction */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
@@ -158,23 +159,7 @@ export function Certifications() {
                       </div>
                     )}
                     
-                    {/* Upload Input */}
-                    <input
-                      ref={(el) => { fileInputRefs.current[index] = el }}
-                      type="file"
-                      accept=".pdf"
-                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                      onChange={(e) => {
-                        const file = e.target.files?.[0]
-                        if (file) handleFileUpload(index, file)
-                      }}
-                    />
-                    
-                    {uploadingIndex === index && (
-                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                        <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-golden-400"></div>
-                      </div>
-                    )}
+                   
                   </div>
 
                   {/* PDF Action Buttons */}
@@ -183,21 +168,13 @@ export function Certifications() {
                       <Button
                         size="sm"
                         variant="outline"
-                        onClick={() => handleViewPDF(cert.pdfPath!)}
+                        onClick={() => handleViewPDF(cert.imagePath!)}
                         className="flex-1 border-golden-600 text-black hover:bg-golden-400/10 hover:text-golden-300"
                       >
                         <Eye className="h-4 w-4 mr-1" />
                         View
                       </Button>
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        onClick={() => handleDownloadPDF(cert.pdfPath!, cert.title)}
-                        className="flex-1 border-golden-600 text-black hover:bg-golden-400/10 hover:text-golden-300"
-                      >
-                        <Download className="h-4 w-4 mr-1" />
-                        Download
-                      </Button>
+                      
                     </div>
                   )}
 
