@@ -165,15 +165,7 @@ export function Certifications() {
                   {/* PDF Action Buttons */}
                   {cert.pdfPath && (
                     <div className="flex gap-2 mb-4">
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        onClick={() => handleViewPDF(cert.imagePath!)}
-                        className="flex-1 border-golden-600 text-black hover:bg-golden-400/10 hover:text-golden-300"
-                      >
-                        <Eye className="h-4 w-4 mr-1" />
-                        View
-                      </Button>
+                      
                       
                     </div>
                   )}
