@@ -33,6 +33,14 @@ const certifications = [
     pdfPath: "/Hair Treatment Certificate.pdf",
     imagePath: "/Hair Treatment Certificate_page-0001.jpg", // No PDF uploaded yet
   },
+  {
+    icon: Trophy,
+    title: "Advance Beautician & Hair Dressing Certificate",
+    issuer: "Kayakalp Beauty Parlour, Mahendragarh, Haryana",
+    year: "2000",
+    description: "One-year professional certification in Hair Dressing & Beautician Course (Basic to Advance), including Makeup and Hair Styling. Successfully completed with A Grade performance.",
+    imagePath: "/WhatsApp Image 2026-01-12 at 20.29.17.jpeg", // No PDF uploaded yet
+  },
 ]
 
 export function Certifications() {
