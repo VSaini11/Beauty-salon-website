@@ -9,14 +9,14 @@ const certifications = [
   {
     icon: Award,
     title: "Nail Extension and Nail Art Certificate",
-    issuer: "Beauty Institute of India",
+    issuer: "Navyug Digital Private Limited",
     year: "2023",
     pdfPath: "/Nandi b Academy Private _20250625_120651_0000.pdf", // Example PDF from your public folder
   },
   {
     icon: Star,
     title: "Professional Beautician and Makeup Certificate",
-    issuer: "International Hair Academy",
+    issuer: "Navyug Digital Private Limited",
     year: "2022",
     description: "Specialized training in modern hair cutting techniques, coloring, and advanced styling methods.",
     pdfPath: "/Nandi b Academy Private _20250709_153407_0000.pdf", // Example PDF from your public folder
@@ -24,11 +24,11 @@ const certifications = [
   
   {
     icon: Trophy,
-    title: "Bridal Makeup Artist License",
-    issuer: "Bridal Beauty Association",
-    year: "2018",
-    description: "Professional certification in bridal makeup, wedding styling, and special occasion beauty services.",
-    pdfPath: null, // No PDF uploaded yet
+    title: "Hair Treatment Certificate",
+    issuer: "Navyug Digital Private Limited",
+    year: "2024",
+    description: "Professional certification in haircare, hairstyling, and advanced hair treatment services.",
+    pdfPath: "/Hair Treatment Certificate.pdf", // No PDF uploaded yet
   },
 ]
 
